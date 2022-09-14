@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            font-size: 36px;
+        }
+
+        .input-field {
+            min-height: 40px;
+            font-size: 36px;
+            border: 1px solid black;
+            border-radius: 5px;
+
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" novalidate>
+        <fieldset>
+            <legend>UserData</legend>
+            <label for="user-name">Username: </label>
+            <input list="names" type="text" id="user-name" name="user-name" class="input-field" placeholder="Username"><br>
+            <datalist id="names">
+                <option value="Nikita">Nikita</option>
+                <option value="Jack">Jack</option>
+                <option value="Sarah">Sarah</option>
+            </datalist>
+            <label for="User-email">Email: </label>
+            <input type="email" id="user-email" name="user-email" class="input-field" autofocus><br>
+            <label for="user-pass">Password: </label>
+            <input type="password" id="user-pass" name="user-pass" class="input-field" maxlength="20"><br>
+        </fieldset>
+        <!-- Radio buttons -->
+        <label for="html">HTML</label>
+        <input type="radio" id="html" name="prog-lang" value="html" checked><br>
+        <label for="css">CSS</label>
+        <input type="radio" id="css" name="prog-lang" value="css"><br>
+        <label for="js">JavaScript</label>
+        <input type="radio" id="js" name="prog-lang" value="js"><br>
+        <!-- Checkbox -->
+        <label for="newsletter">Receive News?</label>
+        <input type="checkbox" id="newsletter" name="newsletter" value="checked"><br>
+        <label for="car-brand">Choose a car brand</label>
+        <select name="car-brand" id="car-brand" class="input-field" size="8" multiple>
+            <optgroup label="German Cars">
+                <option value="bmw">BMW</option>
+                <option value="mb">Mercedes-benz</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+            <optgroup label="Japan Cars">
+                <option value="honda">Honda</option>
+                <option value="nissan">Nissan</option>
+                <option value="subaru">Subaru</option>
+            </optgroup>
+        </select><br>
+        <label for="user-message">Enter your message: </label>
+        <textarea name="user-message" id="user-message" class="input-field" cols="30" rows="10"></textarea><br>
+        <input type="date" class="input-field" min="2022-09-14" max="2022-10-14"><br>
+        <input type="hidden" class="input-field" value="false" name="hidden"><br>
+        <input type="number" class="input-field" min="0" max="5"><br>
+        <button type="button" class="input-field" onclick="alert('Hello World')">Alert!</button>
+        <input type="reset" class="input-field" value="Clear Form">
+        <input type="submit" class="input-field" value="Click me!" disabled>
+    </form>
+</body>
+
+</html>
